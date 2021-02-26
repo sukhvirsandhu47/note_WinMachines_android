@@ -101,26 +101,6 @@ public class HomeFragment extends Fragment implements onNoteClicked {
     }
 
 
-/*
-    private void filter(String text) {
-
-        //RealmResults<Note> filterdata = new ArrayList<Note>();
-
-        for (int i = 0; i < notesList.size(); i++) {
-
-            if (notesList.get(i).getNote_title().toLowerCase().contains(text.toLowerCase()) || notesList.get(i).getNote_title().toLowerCase().contains(text.toLowerCase())) {
-                //adding the element to filtered list
-                filterdata.add(notesList.get(i));
-            }
-        }
-
-        notesAdapter = new NotesAdapter(getContext(), filterdata,this);
-        notesRecycler.setAdapter(notesAdapter);
-
-    }
-*/
-
-
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         btnAdd.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this)
