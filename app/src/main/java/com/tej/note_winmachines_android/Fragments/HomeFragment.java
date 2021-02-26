@@ -134,7 +134,6 @@ public class HomeFragment extends Fragment implements onNoteClicked {
 
         btnmap.setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), MapsActivity.class);
-//            intent.putExtra("note", note);
             intent.putExtra("pos", pos);
             startActivity(intent);
             dialog.dismiss();
@@ -152,7 +151,6 @@ public class HomeFragment extends Fragment implements onNoteClicked {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 200 && resultCode == RESULT_OK) {
-//            note.setSubId(data.getLongExtra("selectedSubjectId", -1L));
             DBAccess.updateNote(note.getNote_id(),data.getLongExtra("selectedSubjectId", -1L));
             new SweetAlertDialog(requireContext(), SweetAlertDialog.SUCCESS_TYPE)
                     .setTitleText("Success!!")
