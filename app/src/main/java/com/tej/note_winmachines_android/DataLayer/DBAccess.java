@@ -58,6 +58,7 @@ public class DBAccess {
             note.setSubId(selectedSubjectId);
         });
     }
+     //to save subject in database;
 
     static public boolean saveSubject(String subjectName, Context context) {
         boolean isSubjectExist = realm.where(SubjectModel.class).equalTo("subjectName", subjectName.toLowerCase()).findAll().size() != 0;
@@ -74,7 +75,7 @@ public class DBAccess {
         });
         return true;
     }
-
+     //to update note in database
     static public void updateNote(Long noteId, Long subId) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
