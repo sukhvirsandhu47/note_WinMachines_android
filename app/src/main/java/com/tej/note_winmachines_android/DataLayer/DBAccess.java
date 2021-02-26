@@ -18,6 +18,7 @@ public class DBAccess {
 
     //private static Realm realm;
     static Realm realm = Realm.getDefaultInstance();
+    //to fetch note from database;
 
     static public RealmResults<Note> fetchNotes() {
         return realm.where(Note.class).findAll();
@@ -83,6 +84,7 @@ public class DBAccess {
             }
         });
     }
+   //to deletes notes from database;
 
     static public void deleteNote(Note note, Context context) {
         realm.beginTransaction();
