@@ -19,7 +19,7 @@ public class Helper {
         return BitmapFactory.decodeByteArray(array,0,array.length);
     }
     public  static  String ConvertDateToString(Date date){
-        return DateFormat.format("MM/dd/yyyy", date).toString();
+        return DateFormat.format("MMM d, yyyy", date).toString();
     }
 
 
